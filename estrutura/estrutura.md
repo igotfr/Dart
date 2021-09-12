@@ -129,7 +129,11 @@ void main() {
 
 Para usar as chamadas de funções, precisamos colocá-las em um print() ou atribuí-las a uma variável
 ```dart
-    NOME_DA_FUNÇÃO();
+    // atribuindo a uma variável
+    TIPO_QUE_É_O_MESMO_DO_RETORNO_DA_FUNÇÃO NOME_DA_VARIÁVEL = NOME_DA_FUNÇÃO();
+    
+    // printando
+    print(NOME_DA_FUNÇÃO());
     
     // Exemplos usando as funções declaradas acima
     
