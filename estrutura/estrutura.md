@@ -64,7 +64,7 @@ void main() {
     return b;
   }
   
-  // Declaração de função com somente 1 instrução (linha), que somente retorna
+  // Declaração de função com somente 1 instrução (linha), que somente retorna. Arrow (seta)
   bool booleana2() => true;
 ```
 
@@ -75,7 +75,7 @@ void main() {
     return i;
   }
 
-  // Declaração de função com somente 1 instrução (linha), que somente retorna
+  // Declaração de função com somente 1 instrução (linha), que somente retorna. Arrow (seta)
   int numeroInteiro2() => 45;
 ```
 
@@ -86,7 +86,7 @@ void main() {
     return d;
   }
 
-  // Declaração de função com somente 1 instrução (linha), que somente retorna
+  // Declaração de função com somente 1 instrução (linha), que somente retorna. Arrow (seta)
   double numeroRacional2() => 5.65;
 ```
 
@@ -97,7 +97,7 @@ void main() {
     return n;
   }
 
-  // Declaração de função com somente 1 instrução (linha), que somente retorna
+  // Declaração de função com somente 1 instrução (linha), que somente retorna. Arrow (seta)
   num numeroRacional2() => 9.82;
 ```
 
@@ -108,7 +108,7 @@ void main() {
     return s;
   }
 
-  // Declaração de função com somente 1 instrução (linha), que somente retorna
+  // Declaração de função com somente 1 instrução (linha), que somente retorna. Arrow (seta)
   String texto2() => 'texto retornado';
 ```
 
