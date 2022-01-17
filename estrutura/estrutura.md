@@ -91,6 +91,18 @@ void main() {
 ## Funções
 #### Declaração de função
 ```dart
+  // Funções void não retornam nenhum valor, mas podem fazer qualqer tipo de operação em seu corpo
+  void naoRetornaNada1() {
+    int numero = 77;
+
+    print('Exiba $numero na tela'); // quando esta função for chamada, 'Exiba 77 na tela' será mostrado
+  }
+
+  // Declaração de função com somente 1 instrução (linha), que não retorna nada. Arrow (seta)
+  void naoRetornaNada1() => print('Esta função não pode retornar nada');
+```
+
+```dart
   bool booleana1() {
     bool b = false;
     
@@ -150,6 +162,11 @@ void main() {
     NOME_DA_FUNÇÃO();
     
     // Exemplos usando as funções declaradas acima
+    naoRetornaNada1(); // mostra na tela: 'Exiba 77 na tela'
+    naoRetornaNada2(); // mostra na tela: 'Esta função não pode retornar nada'
+
+    // as funções abaixo, não fazem nada na prática, pois a única coisa qe fazem é retornar um valor,
+    // e uma chamada de função qe retorna um valor deve ser atribuída a uma variável ou usada dentro de outras funções, como a função print()
     booleana1();
     booleana2();
     numeroInteiro1();
@@ -160,7 +177,7 @@ void main() {
     texto2();
 ```
 
-Para usar as chamadas de funções, precisamos colocá-las em um print() ou atribuí-las a uma variável
+Para usar as chamadas de funções que retornam um valor, precisamos colocá-las dentro de outras funções, como a função print() ou atribuí-las a uma variável
 ```dart
     // atribuindo a uma variável
     TIPO_QUE_É_O_MESMO_DO_RETORNO_DA_FUNÇÃO NOME_DA_VARIÁVEL = NOME_DA_FUNÇÃO();
@@ -218,3 +235,5 @@ Para usar as chamadas de funções, precisamos colocá-las em um print() ou atri
     // printando
     print(texto2());
 ```
+
+## 
