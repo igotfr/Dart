@@ -270,3 +270,48 @@ void main() {
   print(soma(3, 7)); // printará 10
 }
 ```
+
+## class
+```dart
+// uma das formas de declarar uma class é inicializando seus atributos com valores padrões (default)
+class Pessoa {
+  String nome = 'Cleison';
+  int idade = 54;
+  num peso = 65.94;
+}
+
+void main() {
+  Pessoa p = Pessoa();
+
+  print(p.nome); // 'Cleiton'
+
+  // alterando um dos atributos
+  p.nome = 'Jailson';
+
+  print(p.nome); // 'Jailson'
+}
+```
+
+```dart
+// outra forma é usando late para uma atribuição "tardia", "atrasada"
+// no entanto, não atribuir um valor a qualqer atributo gerará um erro de compilação
+class Pessoa {
+  late String nome;
+  late int idade;
+  late num peso;
+}
+
+void main() {
+  Pessoa p = Pessoa();
+  p.nome = 'Cleiton';
+  p.idade = 54;
+  p.peso = 65.94;
+  
+  // alternativamente, pode atribuir usando uma sintaxe sugar, da seginte forma:
+  p..nome = 'Cleiton';
+    ..idade = 54;
+    ..peso = 65.94;
+
+  print(p.nome); // 'Cleiton'
+}
+```
