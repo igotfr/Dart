@@ -315,3 +315,40 @@ void main() {
   print(p.nome); // 'Cleiton'
 }
 ```
+
+### Constructors
+```dart
+// outra forma de inicializar uma instância de class é usando construtor
+class Pessoa {
+  late String nome;
+  late int idade;
+  late num peso;
+
+  Pessoa(String nome, int idade, num peso) {
+    this.nome = nome;
+    this.idade = idade;
+    this.peso = peso;
+  }
+}
+
+void main() {
+  Pessoa p = Pessoa('Cleitin', 49, 99.87);
+  print(p.nome); // 'Cleitin'
+}
+```
+
+```dart
+// ou de forma mais simples e também mais usada: usando a syntax sugar para declaração do construtor
+class Pessoa {
+  late String nome;
+  late int idade;
+  late num peso;
+
+  Pessoa(this.nome, this.idade, this.peso);
+}
+
+void main() {
+  Pessoa p = Pessoa('Cleitin', 49, 99.87);
+  print(p.nome); // 'Cleitin'
+}
+```
