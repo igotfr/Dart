@@ -236,4 +236,37 @@ Para usar as chamadas de funções que retornam um valor, precisamos colocá-las
     print(texto2());
 ```
 
-## 
+## Functions as first-class objects ou Functions as first-class citizens ou mais simples: atribuir uma função a uma variável
+```dart
+void main() {
+  // atribuir função anônima (anonymous function) a variável
+  int Function() f = () => 7 + 8;
+
+  print(f()); // printará 15
+
+  String Function() h = () { return 6 + 3; };
+
+  print(h()); // printará 9
+}
+```
+
+```dart
+int g() => 8 + 9;
+
+void main() {
+  // atribuir função previamente declarada a variável
+  int Function() f = g;
+
+  print(f()); // printará 15
+}
+```
+
+```dart
+void main() {
+  // na tipagem: em Function(int, int), dar nomes para os parâmetros é opcional, por exemplo: Function(int a, int b)
+  // na atribuição de valor: em (a, b) => a + b; colocar a tipagem para os parâmetros é opcional, por exemplo: (int a, int b) => a + b;
+  int Function(int, int) soma = (a, b) => a + b;
+
+  print(soma(3, 7)); // printará 10
+}
+```
