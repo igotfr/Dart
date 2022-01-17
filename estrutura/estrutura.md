@@ -63,7 +63,28 @@ void main() {
 ## Operadores booleanos
 ```dart
 void main() {
+  // Em uma cadeia de || (or):
+  // - quando todos os valores são true, o resultado é true
+  // - quando todos os valores são false, o resultado é false
+  // - quando pelo menos 1 valor é true, o resultado é true
+
+  // o || (or) pode ser associado à soma:
+  // false || false == false assim como 0 + 0 = 0
+  // false || true == true assim como 0 + 1 = 1
+  // true || false == true assim como 1 + 0 = 1
+  // true || true == true assim como 1 + 1 = 2
   bool or = false || false || false || true; // true
+  
+  // Em uma cadeia de && (and):
+  // - quando todos os valores são true, o resultado é true
+  // - quando todos os valores são false, o resultado é false
+  // - quando pelo menos 1 valor é false, o resultado é false
+
+  // o && (and) pode ser associado à multiplicação:
+  // false && false == false assim como 0 * 0 = 0
+  // false && true == false assim como 0 * 1 = 0
+  // true && false == false assim como 1 * 0 = 0
+  // true && true == true assim como 1 * 1 = 1
   bool and = true && true && true && false; // false
 }
 ```
