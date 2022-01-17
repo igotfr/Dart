@@ -10,10 +10,18 @@ void main() {
   int i = 4 + 10 * 5; // 54
 
   double d = 3 - 10 / 4; // 0.5
-  
+
   num n = 4 + 7 / 8; // 4.875
 
   String s = 'texto ${2 + 3}' + ' concatecado'; // 'texto 5 concatecado'
+
+  // Dart assim como C# suporta inferência de tipo, deduzindo o tipo da variável a partir do valor atribuído a ela
+  var a = 5; // a é inferido como int
+  var c = false; // c é inferido como bool
+
+  // também suporta variáveis dinâmicas qe aceitam qualqer tipo de valor, incluindo null. Object também pode ser usado
+  dynamic e = 4.5;
+  e = 'reatribuindo uma String a um double';
 }
 ```
 
@@ -31,6 +39,10 @@ void main() {
   num? n = null;
 
   String? s = null;
+  
+  // também suporta variáveis dinâmicas qe aceitam qualqer tipo de valor, incluindo null. Object também pode ser usado
+  dynamic? e = 4.5;
+  e = 'reatribuindo uma String a um double';
 }
 ```
 
