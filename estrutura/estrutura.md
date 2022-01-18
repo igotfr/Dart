@@ -340,9 +340,9 @@ void main() {
 ```dart
 // ou de forma mais simples e também mais usada: usando a syntax sugar para declaração do construtor
 class Pessoa {
-  late String nome;
-  late int idade;
-  late num peso;
+  String nome;
+  int idade;
+  num peso;
 
   Pessoa(this.nome, this.idade, this.peso);
 }
