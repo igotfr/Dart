@@ -236,6 +236,52 @@ Para usar as chamadas de funções que retornam um valor, precisamos colocá-las
     print(texto2());
 ```
 
+#### Optional parameters (Parâmetros Opcionais)
+```dart
+void f(int n, [int optional = 7]) {
+  print('$n, $optional');
+}
+
+// na função g abaixo, como não foi atribuído um valor default (padrão) para optional, ocorrerá um erro na declaração da função
+void g(int n, [int optional]) => print('$n, $optional');
+
+// na função h abaixo, optional assumirá implicitamente um valor default (padrão) de null
+void h(int n, [int? optional]) => print('$n, $optional');
+
+void main() {
+  f(2);    // quando não passado um valor, o valor default (padrão) é assumido
+  f(3, 9); // agora passando um valor para o parâmetro opcional, o valor passado será assumido
+  
+  h(5);    // o segundo argumento (optional) terá o valor de null
+}
+```
+
+#### Named parameters (Parâmetros Nomeados)
+```dart
+void f(int n, {int named = 7}) {
+  print('$n, $named');
+}
+
+// na função g abaixo, como não foi atribuído um valor default (padrão) para named, ocorrerá um erro na declaração da função
+void g(int n, {int named}) => print('$n, $optional');
+
+// na função h abaixo, named assumirá implicitamente um valor default (padrão) de null
+void h(int n, {int? named}) => print('$n, $optional');
+
+// caso não se qeira atribuir um valor default (padrão), mas não se qeira permitir atribuir null para o parâmetro nomeado
+// deve-se usar a keyword (palavra reservada) required, assim, será obrigatório atribuir um valor para o parâmetro nomeado
+void l(int n, {required int named}) => print('$n, $optional');
+
+void main() {
+  f(2);           // quando não passado um valor, o valor default (padrão) é assumido
+  f(3, named: 9); // agora passando um valor para o parâmetro nomeado, o valor passado será assumido
+
+  h(5);           // o segundo argumento (named) terá o valor de null
+
+  l(7, named: 10); // aqi é obrigatório passar um valor para o argumento nomeado (named) porqe ele foi definido como required
+}
+```
+
 ## Functions as first-class objects ou Functions as first-class citizens ou mais simples: atribuir uma função a uma variável
 ```dart
 void main() {
