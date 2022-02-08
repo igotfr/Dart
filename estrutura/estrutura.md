@@ -19,7 +19,7 @@ void main() {
   var a = 5; // a é inferido como int
   var c = false; // c é inferido como bool
 
-  // também suporta variáveis dinâmicas qe aceitam qualqer tipo de valor, incluindo null. Object também pode ser usado
+  // também suporta variáveis dinâmicas qe aceitam qualqer tipo de valor, incluindo null e podem ser reatribuídas para outros tipos de valores. Object também pode ser usado
   dynamic e = 4.5;
   e = 'reatribuindo uma String a um double';
 }
@@ -40,9 +40,25 @@ void main() {
 
   String? s = null;
   
-  // também suporta variáveis dinâmicas qe aceitam qualqer tipo de valor, incluindo null. Object também pode ser usado
+  // também suporta variáveis dinâmicas qe aceitam qualqer tipo de valor, incluindo null e podem ser reatribuídas para outros tipos de valores. Object também pode ser usado
   dynamic? e = 4.5;
   e = 'reatribuindo uma String a um double';
+}
+```
+
+#### late
+```dart
+void main() {
+  // late pode ser usado em funções mas é desnecessário, ele somente é obrigatório em classes
+  String s;
+  s = 'qualqer coisa';
+}
+```
+```dart
+void main() {
+  // mesmo como acima, mas o late é opcional em funções
+  late String s;
+  s = 'qualqer coisa';
 }
 ```
 
@@ -290,9 +306,9 @@ void main() {
 
   print(f()); // printará 15
 
-  String Function() h = () { return 6 + 3; };
+  String Function() h = () { return 'Geraldo'; };
 
-  print(h()); // printará 9
+  print(h()); // printará 'Geraldo'
 }
 ```
 
@@ -314,6 +330,23 @@ void main() {
   int Function(int, int) soma = (a, b) => a + b;
 
   print(soma(3, 7)); // printará 10
+}
+```
+
+#### Parâmetros recebendo funções
+```dart
+void f(void Function() g) => g();
+
+void main() {
+  f(() => print('algo'));
+}
+```
+```dart
+// alternativamente, o parâmetro qe recebe a função pode ser escrito assim:
+void f(void g()) => g();
+
+void main() {
+  f(() => print('algo'));
 }
 ```
 
