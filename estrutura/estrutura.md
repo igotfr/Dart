@@ -431,3 +431,51 @@ void main() {
   print(p.nome); // 'Cleitin'
 }
 ```
+
+### Inheritance (Herança)
+```dart
+class Pessoa {
+  String nome;
+  int idade;
+  num peso;
+
+  Pessoa(this.nome, this.idade, this.peso);
+
+  void f() => print('Aluno herdará este método');
+
+  void g() => print('Aluno também herdará este método');
+}
+
+class Aluno extends Pessoa {
+  int idMatricula;
+
+  Aluno(this.idMatricula, String nome, int idade, num peso) : super(nome, idade, peso);
+
+  @override
+  void g() => print('Este método será sobrescrito para Aluno');
+}
+```
+
+## async, await, Future, then
+```dart
+Future<String> f() {
+  return Future.delayed(const Duration(seconds: 5), () => 'delay');
+}
+
+void main() {
+  print('antes');
+  f().then((value) => print(value));
+  print('depois');
+}
+```
+```dart
+Future<String> f() {
+  return Future.delayed(const Duration(seconds: 5), () => 'delay');
+}
+
+void main() async {
+  print('antes');
+  print(await f());
+  print('depois');
+}
+```
