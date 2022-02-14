@@ -228,25 +228,25 @@ Para usar as chamadas de funções que retornam um valor, precisamos colocá-las
     print(numeroInteiro2());
 
     // atribuindo a uma variável
-    double numeroRacional1();
+    double d = numeroRacional1();
     
     // printando
     print(numeroRacional1());
 
     // atribuindo a uma variável
-    num numeroRacional2();
+    num n = numeroRacional2();
     
     // printando
     print(numeroRacional2());
 
     // atribuindo a uma variável
-    String texto1();
+    String s1 = texto1();
     
     // printando
     print(texto1());
 
     // atribuindo a uma variável
-    String texto2();
+    String s2 = texto2();
 
     // printando
     print(texto2());
