@@ -1,6 +1,6 @@
-## Tipos de dados
+## Data Types (Tipos de dados)
 
-#### Declaração e atribuição de variável
+#### Variable Declaration and Assignment (Declaração e atribuição de variável)
 ```dart
 void main() {
   TIPO NOME = VALOR;
@@ -25,7 +25,7 @@ void main() {
 }
 ```
 
-#### Declaração e atribuição de variável nulável
+#### Nullable Variable Declaration and Assignment (Declaração e atribuição de variável nulável)
 ```dart
 void main() {
   TIPO? NOME = VALOR;
@@ -62,21 +62,21 @@ void main() {
 }
 ```
 
-## Concatenação
+## Concatenation (Concatenação)
 ```dart
 void main() {
   String s = 'dart' + ' flutter ' + 20.toString();
 }
 ```
 
-## Interpolação em String - String Interpolation
+## String Interpolation (Interpolação em String)
 ```dart
 void main() {
   String s = 'dart flutter ${20}';
 }
 ```
 
-## Operadores booleanos
+## Boolean Operators (Operadores Booleanos)
 ```dart
 void main() {
   // Em uma cadeia de || (or):
@@ -104,8 +104,8 @@ void main() {
   bool and = true && true && true && false; // false
 }
 ```
-## Funções
-#### Declaração de função
+## Functions (Funções)
+#### Function Definition (Definição de função)
 ```dart
   // Funções void não retornam nenhum valor, mas podem fazer qualqer tipo de operação em seu corpo
   void naoRetornaNada1() {
@@ -173,10 +173,10 @@ void main() {
   String texto2() => 'texto retornado';
 ```
 
-#### Chamada de função
+#### Function Calling (Chamada de função)
 ```dart
     NOME_DA_FUNÇÃO();
-    
+
     // Exemplos usando as funções declaradas acima
     naoRetornaNada1(); // mostra na tela: 'Exiba 77 na tela'
     naoRetornaNada2(); // mostra na tela: 'Esta função não pode retornar nada'
@@ -197,12 +197,12 @@ Para usar as chamadas de funções que retornam um valor, precisamos colocá-las
 ```dart
     // atribuindo a uma variável
     TIPO_QUE_É_O_MESMO_DO_RETORNO_DA_FUNÇÃO NOME_DA_VARIÁVEL = NOME_DA_FUNÇÃO();
-    
+
     // printando
     print(NOME_DA_FUNÇÃO());
-    
+
     // Exemplos usando as funções declaradas acima
-    
+
     // atribuindo a uma variável
     bool b1 = booleana1();
 
@@ -217,31 +217,31 @@ Para usar as chamadas de funções que retornam um valor, precisamos colocá-las
 
     // atribuindo a uma variável
     int i1 = numeroInteiro1();
-    
+
     // printando
     print(numeroInteiro1());
-    
+
     // atribuindo a uma variável
     int i2 = numeroInteiro2();
-    
+
     // printando
     print(numeroInteiro2());
 
     // atribuindo a uma variável
     double d = numeroRacional1();
-    
+
     // printando
     print(numeroRacional1());
 
     // atribuindo a uma variável
     num n = numeroRacional2();
-    
+
     // printando
     print(numeroRacional2());
 
     // atribuindo a uma variável
     String s1 = texto1();
-    
+
     // printando
     print(texto1());
 
@@ -267,7 +267,7 @@ void h(int n, [int? optional]) => print('$n, $optional');
 void main() {
   f(2);    // quando não passado um valor, o valor default (padrão) é assumido
   f(3, 9); // agora passando um valor para o parâmetro opcional, o valor passado será assumido
-  
+
   h(5);    // o segundo argumento (optional) terá o valor de null
 }
 ```
@@ -395,7 +395,7 @@ void main() {
 }
 ```
 
-### Constructors
+### Constructors (Construtores)
 ```dart
 // outra forma de inicializar uma instância de class é usando construtor
 class Pessoa {
