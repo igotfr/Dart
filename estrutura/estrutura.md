@@ -462,6 +462,13 @@ Future<String> f() {
   return Future.delayed(const Duration(seconds: 5), () => 'delay');
 }
 
+// ou
+
+Future<String> f() async {
+  await Future.delayed(const Duration(seconds: 5));
+  return 'delay';
+}
+
 void main() {
   print('antes');
   f().then((value) => print(value));
@@ -471,6 +478,13 @@ void main() {
 ```dart
 Future<String> f() {
   return Future.delayed(const Duration(seconds: 5), () => 'delay');
+}
+
+// ou
+
+Future<String> f() async {
+  await Future.delayed(const Duration(seconds: 5));
+  return 'delay';
 }
 
 void main() async {
