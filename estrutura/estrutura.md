@@ -468,23 +468,12 @@ Future<String> f() async {
   await Future.delayed(const Duration(seconds: 5));
   return 'delay';
 }
-
+```
+```dart
 void main() {
   print('antes');
   f().then((value) => print(value));
   print('depois');
-}
-```
-```dart
-Future<String> f() {
-  return Future.delayed(const Duration(seconds: 5), () => 'delay');
-}
-
-// ou
-
-Future<String> f() async {
-  await Future.delayed(const Duration(seconds: 5));
-  return 'delay';
 }
 
 void main() async {
